@@ -8,22 +8,28 @@ users = [
 ]
 
 
-# Using set to collect unique roles
-def countUniqueRole():
+def get_unique_roles(users):
     roles = set()
     for user in users:
-           roles.add(user["role"])
-    return roles.__len__();       
+        role = user.get("role")
+        if role:
+            roles.add(role)
+    return roles
 
-def userByGivenRole(role):
-    usersByRoles = []
+
+def users_by_role(users, target_role):
+    result = []
     for user in users:
-           if user["role"] == role:
-               usersByRoles.append(user)
-    return usersByRoles.__len__()
-            
+        if user.get("role") == target_role:
+            result.append(user)
+    return result
+
 
 if __name__ == "__main__":
-    print(f"count of unique roles are {countUniqueRole()} \n")
-    print(f"User by role Dev are {userByGivenRole("Dev")} \n")            
-    print(f"User by role QA are {userByGivenRole("QA")} \n")            
+    unique_roles = get_unique_roles(users)
+    print("Unique roles:", unique_roles)
+    print("Count:", len(unique_roles))
+
+    devs = users_by_role(users, "Dev")
+    print("Dev users:", devs)
+    print("Dev count:", len(devs))
