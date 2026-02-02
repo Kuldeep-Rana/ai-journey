@@ -1,0 +1,5 @@
+total users - 5 
+unique roles - {'Dev', 'QA', 'BA'}
+average age by role - [{'role': 'Dev', 'avg age': 31.0}, {'role': 'QA', 'avg age': 31.5}, {'role': 'BA', 'avg age': 38.0}]
+count per role [{'role': 'BA', 'count': 1}, {'role': 'Dev', 'count': 2}, {'role': 'QA', 'count': 2}]
+average age per role [{'role': 'Dev', 'avg age': 31.0}, {'role': 'QA', 'avg age': 31.5}, {'role': 'BA', 'avg age': 38.0}]
