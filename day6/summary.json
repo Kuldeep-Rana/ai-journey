@@ -1,0 +1,13 @@
+{
+  "total_users": 5,
+  "roles": {
+    "Dev": 2,
+    "QA": 2,
+    "BA": 1
+  },
+  "age_stats": {
+    "min": 28,
+    "max": 38,
+    "average": 32.6
+  }
+}
