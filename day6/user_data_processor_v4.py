@@ -31,15 +31,16 @@ def find_user_by_email(users, email):
         u_email = user["email"]
         if u_email == email:
             return user
-        else:
-            "None"
+        
+        return "None"
             
 def sort_users(users, by="age", order="asc"):
     reverse = order == "desc"
     return sorted(users, key=lambda u: u.get(by), reverse=reverse)
 
 def get_top_n_oldest_users(users, n):
-    return  users[:n]
+    sorted_users = sort_users(users, by="age", order="desc")
+    return  sorted_users[:n]
 
 import json
 
@@ -70,7 +71,7 @@ def write_summary_json(summary, path):
 
 if __name__ == "__main__":
     users = load_users("day5//users.txt")
-    oldest_user = sort_users(users, by="age", order="desc")
-    n_users = get_top_n_oldest_users(oldest_user,2)
+    sorted_by_age = sort_users(users, by="age", order="desc")
+    oldest_users = get_top_n_oldest_users(users,2)
     summary = generate_summary(users)
     write_summary_json(summary, "day6\\summary.json")
