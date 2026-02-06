@@ -45,6 +45,9 @@ def get_top_n_oldest_users(users, n):
 import json
 
 def generate_summary(users):
+    if not users:
+        return {}
+    
     ages = [u["age"] for u in users]
     roles = {}
 
@@ -70,7 +73,7 @@ def write_summary_json(summary, path):
     
 
 if __name__ == "__main__":
-    users = load_users("day5//users.txt")
+    users = load_users("day6//users.txt")
     sorted_by_age = sort_users(users, by="age", order="desc")
     oldest_users = get_top_n_oldest_users(users,2)
     summary = generate_summary(users)
