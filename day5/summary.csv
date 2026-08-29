@@ -1,0 +1,4 @@
+role,count,min_age,max_age,avg_age
+Dev,2,30,32,31.0
+QA,2,28,35,31.5
+BA,1,38,38,38.0

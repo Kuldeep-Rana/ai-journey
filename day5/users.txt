@@ -1,0 +1,5 @@
+kuldeep,kuldeep@test.com,30,Dev
+amit,amit@test.com,32,Dev
+sumit,sumit@test.com,35,QA
+anil,anil@test.com,38,BA
+riya,riya@test.com,28,QA
