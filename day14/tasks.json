@@ -1,0 +1,23 @@
+[
+  {
+    "id": "TASK-101",
+    "title": "Fix payment retry mechanism",
+    "status": "IN_PROGRESS",
+    "priority": "HIGH",
+    "assignee": "Kuldeep"
+  },
+  {
+    "id": "TASK-102",
+    "title": "Upgrade Spring Boot version",
+    "status": "TODO",
+    "priority": "MEDIUM",
+    "assignee": "Kuldeep"
+  },
+  {
+    "id": "TASK-103",
+    "title": "Investigate Kafka consumer lag",
+    "status": "TODO",
+    "priority": "HIGH",
+    "assignee": "Rahul"
+  }
+]
