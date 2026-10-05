@@ -28,9 +28,25 @@ list_tasks_tool = types.FunctionDeclaration(
     )
 )
 
+search_tasks_tool = types.FunctionDeclaration(
+    name = "searchTasks",
+    description = "Search task by the title provided in the input by the users and retrun all matching tasks",
+    parameters = types.Schema(
+        type = "OBJECT",
+        properties = {
+            "keyword" : types.Schema(
+                type = "STRING",
+                description = "The string value of input to be matched with the title of tasks"
+            )
+        },
+        required = ["keyword"] 
+    )
+)
+
 task_tools = types.Tool(
     function_declarations = [
         list_tasks_tool,
-        get_task_by_id_tool
+        get_task_by_id_tool,
+        search_tasks_tool
     ]
 )

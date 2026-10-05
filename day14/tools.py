@@ -12,6 +12,14 @@ def listTasks(assignee: str = None):
     return tasks
 
 
+def searchTasks(keyword: str = None):
+    with open(file_path, "r", encoding = "UTF-8") as file: 
+        tasks = json.load(file)    
+    if keyword:
+        return [task for task in tasks if keyword.lower() in task.get("title", "").lower()]
+    
+    return []
+
 
 def getTask(taskId):
     tasks = listTasks()
@@ -20,13 +28,14 @@ def getTask(taskId):
         if (task.get("id") == taskId):
             return task
     
-    return {"error": f"No task found for task if {taskId}"}
+    return {"error": f"No task found for task id {taskId}"}
     
 
 
 tool_registry = {
     "listTasks": listTasks,
-    "getTask" : getTask
+    "getTask" : getTask,
+    "searchTasks": searchTasks
 }
  
  
